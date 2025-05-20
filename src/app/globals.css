@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 36 100% 94.1%; /* #FFF3E0 - Very Light Saffron */
+    --foreground: 23 20% 24.5%; /* #4A3B31 - Dark Brown for text */
+
+    --card: 36 100% 95%; /* Slightly lighter than background for cards, or same: 36 100% 94.1% */
+    --card-foreground: 23 20% 24.5%;
+
+    --popover: 36 100% 95%; /* Similar to card */
+    --popover-foreground: 23 20% 24.5%;
+
+    --primary: 30 100% 60%; /* #FF9933 - Deep Saffron */
+    --primary-foreground: 0 0% 100%; /* White for contrast on Deep Saffron */
+
+    --secondary: 30 100% 85.1%; /* #FFE0B2 - Light Saffron/Orange for secondary elements */
+    --secondary-foreground: 23 20% 24.5%; /* Dark Brown for text on secondary */
+
+    --muted: 36 100% 96.3%; /* #FFF8ED - Very, very Light Saffron for muted backgrounds */
+    --muted-foreground: 30 20% 45%; /* Muted Brown for muted text */
+
+    --accent: 51 100% 50%; /* #FFD700 - Golden Yellow for accents */
+    --accent-foreground: 39 100% 10%; /* Dark Brown/Black for text on accent */
+
+    --destructive: 0 84.2% 60.2%; /* Default Red */
+    --destructive-foreground: 0 0% 98%; /* Default Light */
+
+    --border: 30 100% 80%; /* #FFCC99 - Lighter Saffron for borders */
+    --input: 30 100% 86.3%; /* #FFDAB9 - Slightly lighter for input backgrounds, with border being the darker line */
+    --ring: 30 100% 60%; /* Primary color for focus rings */
+
+    --radius: 0.5rem;
+
+    /* Sidebar specific colors (can be adjusted if sidebar is heavily themed) */
+    --sidebar-background: 36 100% 93%; /* Slightly darker than main bg or primary-based */
+    --sidebar-foreground: 23 20% 24.5%;
+    --sidebar-primary: 30 100% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 51 100% 50%;
+    --sidebar-accent-foreground: 39 100% 10%;
+    --sidebar-border: 30 100% 75%;
+    --sidebar-ring: 51 100% 50%;
+
+     --chart-1: 30 100% 60%; /* Primary */
+     --chart-2: 51 100% 50%; /* Accent */
+     --chart-3: 20 80% 55%;  /* Another warm color */
+     --chart-4: 40 70% 60%;  /* Yet another warm color */
+     --chart-5: 0 70% 50%;   /* A contrasting warm color like a soft red/orange */
+  }
+
+  .dark {
+    --background: 23 20% 10%; /* Darkest Brown */
+    --foreground: 36 100% 90%; /* Light Saffron Text */
+
+    --card: 23 20% 15%; /* Dark Brown Card */
+    --card-foreground: 36 100% 90%;
+
+    --popover: 23 20% 15%;
+    --popover-foreground: 36 100% 90%;
+
+    --primary: 30 100% 60%; /* Deep Saffron (can remain bright) */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 30 100% 35%; /* Darker Saffron/Orange */
+    --secondary-foreground: 36 100% 90%;
+
+    --muted: 23 20% 20%; /* Dark Muted Brown */
+    --muted-foreground: 36 80% 75%; /* Lighter Muted Saffron */
+
+    --accent: 51 100% 55%; /* Golden Yellow (can remain bright) */
+    --accent-foreground: 39 100% 10%; /* Dark Brown/Black */
+
+    --destructive: 0 70% 45%; /* Darker Red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 100% 25%; /* Dark Saffron Border */
+    --input: 30 100% 20%; /* Dark Saffron Input */
+    --ring: 51 100% 55%; /* Accent for focus rings */
+
+    /* Sidebar specific colors for dark mode */
+    --sidebar-background: 23 20% 12%;
+    --sidebar-foreground: 36 100% 90%;
+    --sidebar-primary: 30 100% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 51 100% 55%;
+    --sidebar-accent-foreground: 39 100% 10%;
+    --sidebar-border: 30 100% 25%;
+    --sidebar-ring: 51 100% 55%;
+
+    --chart-1: 30 100% 65%;
+    --chart-2: 51 100% 60%;
+    --chart-3: 20 80% 60%;
+    --chart-4: 40 70% 65%;
+    --chart-5: 0 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
